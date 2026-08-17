@@ -1,0 +1,103 @@
+{
+  "entities": {
+    "students": {
+      "title": "Students",
+      "description": "Students list with points, codes, and grades",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "code": { "type": "string" },
+        "gradeId": { "type": "string" },
+        "points": { "type": "number" }
+      },
+      "required": ["id", "name", "code", "gradeId", "points"]
+    },
+    "grades": {
+      "title": "Grades",
+      "description": "School grades/classes",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" }
+      },
+      "required": ["id", "name"]
+    },
+    "criteria": {
+      "title": "Criteria",
+      "description": "Evaluation criteria for behavior and academic points",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "points": { "type": "number" },
+        "type": { "type": "string" }
+      },
+      "required": ["id", "title", "points", "type"]
+    },
+    "logs": {
+      "title": "Evaluation Logs",
+      "description": "Historical point logs awarded to students",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "studentId": { "type": "string" },
+        "studentName": { "type": "string" },
+        "criterionTitle": { "type": "string" },
+        "points": { "type": "number" },
+        "type": { "type": "string" },
+        "date": { "type": "string" },
+        "teacherName": { "type": "string" }
+      },
+      "required": ["id", "studentId", "studentName", "criterionTitle", "points", "type", "date", "teacherName"]
+    },
+    "attendance": {
+      "title": "Attendance Records",
+      "description": "Daily attendance status for students",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "studentId": { "type": "string" },
+        "date": { "type": "string" },
+        "status": { "type": "string" }
+      },
+      "required": ["id", "studentId", "date", "status"]
+    },
+    "periods": {
+      "title": "Periods",
+      "description": "Evaluation periods",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "startDate": { "type": "string" },
+        "endDate": { "type": "string" },
+        "isActive": { "type": "boolean" }
+      },
+      "required": ["id", "name", "startDate", "endDate", "isActive"]
+    },
+    "heroes": {
+      "title": "Heroes",
+      "description": "Crowned top students or heroes",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "studentName": { "type": "string" },
+        "studentCode": { "type": "string" },
+        "gradeName": { "type": "string" },
+        "points": { "type": "number" },
+        "periodName": { "type": "string" },
+        "crownDate": { "type": "string" }
+      },
+      "required": ["id", "studentName", "studentCode", "gradeName", "points", "periodName", "crownDate"]
+    },
+    "settings": {
+      "title": "School Settings",
+      "description": "Global school settings such as school name",
+      "type": "object",
+      "properties": {
+        "schoolName": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "منظومة تحفيز الطلاب السلوكية والتربوية",
+  "description": "منصة تفاعلية ذكية وشاملة لإدارة تحفيز الطلاب ورصد السلوك والتقييم الأكاديمي وتتويج أبطال المنافسات",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
